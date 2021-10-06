@@ -52,4 +52,11 @@ D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\obj\De
 D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\ref\Play.Catalog.Service.dll
 D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\Play.Catalog.Service.pdb
 D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\Play.Catalog.Service.genruntimeconfig.cache
+D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 D:\source\C# repos\MicroservicesApp\Play.Catalog\src\Play.Catalog.Service\obj\Debug\net5.0\Play.Catalog.Service.csprojAssemblyReference.cache

@@ -45,13 +45,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Play.Catalog.Contract": {
               "target": "Package",
               "version": "[1.0.0, )"
             },
             "Play.Common": {
               "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[1.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
