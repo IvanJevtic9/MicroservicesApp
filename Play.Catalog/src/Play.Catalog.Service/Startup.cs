@@ -31,7 +31,22 @@ namespace Play.Catalog.Service
                     .AddMongoRepository<Item>("items")
                     .AddMassTransitWithRabbitMq()
                     .AddJwtBererAuthentication();
-            
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(Policies.READ, policy =>
+                {
+                    policy.RequireRole("Admin");
+                    policy.RequireClaim("scope", "catalog.readaccess", "catalog.fullaccess");
+                });
+
+                options.AddPolicy(Policies.WRITE, policy =>
+                {
+                    policy.RequireRole("Admin");
+                    policy.RequireClaim("scope", "catalog.writeaccess", "catalog.fullaccess");
+                });
+            });
+
             services.AddControllers(options =>
             {
                 options.SuppressAsyncSuffixInActionNames = false;

@@ -28,6 +28,7 @@ namespace Play.Catalog.Service.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policies.READ)]
         public async Task<ActionResult<IEnumerable<ItemDto>>> GetAsync()
         {
             return Ok((await repository.GetAllAsync()).Select(item => item.AsDto()));
@@ -35,6 +36,7 @@ namespace Play.Catalog.Service.Controllers
 
         // GET /items/{id}
         [HttpGet("{id}")]
+        [Authorize(Policies.READ)]
         public async Task<ActionResult<ItemDto>> GetById(Guid id)
         {
             var item = (await repository.GetAsync(id));
@@ -49,6 +51,7 @@ namespace Play.Catalog.Service.Controllers
 
         // POST /items
         [HttpPost]
+        [Authorize(Policies.WRITE)]
         public async Task<ActionResult<ItemDto>> CreateAsync(CreateItemDto createItemDto)
         {
             var item = new Item()
@@ -71,6 +74,7 @@ namespace Play.Catalog.Service.Controllers
 
         // PUT /items/{id}
         [HttpPut("{id}")]
+        [Authorize(Policies.WRITE)]
         public async Task<IActionResult> UpdateAsync(Guid id, UpdateItemDto updateItemDto)
         {
             var item = await repository.GetAsync(id);
@@ -92,6 +96,7 @@ namespace Play.Catalog.Service.Controllers
 
         // DELETE /items/{id}
         [HttpDelete("{id}")]
+        [Authorize(Policies.WRITE)]
         public async Task<IActionResult> DeleteAsync(Guid id)
         {
             var item = await repository.GetAsync(id);

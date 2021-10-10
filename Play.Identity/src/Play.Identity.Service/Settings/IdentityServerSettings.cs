@@ -1,5 +1,4 @@
 ﻿using IdentityServer4.Models;
-using System;
 using System.Collections.Generic;
 
 namespace Play.Identity.Service.Settings
@@ -22,7 +21,9 @@ namespace Play.Identity.Service.Settings
             new IdentityResource[]
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                // roles - name of the scope , second argument is list of claims that will be included in this scope
+                new IdentityResource("roles", new [] { "role" }) 
             };
     }
 }
