@@ -2659,7 +2659,7 @@
       ]
     },
     "Play.Catalog.Contract/1.0.0": {
-      "sha512": "uV86XJB3JI+EzYAbL/OQvG3QLnqhf+nXj7VF4AT3sNBjd+xtBmUXLBFn+A53PEcUyxjnNmo26wTdrgdYyltA1Q==",
+      "sha512": "VwocdKXiUeBzGdKW8T5iLOsSjvD3BRchdYhkPD121V8+8cY4uK3JnnpUPVY4PTC4fyvdcosSr6LAKk2FDDLUpA==",
       "type": "package",
       "path": "play.catalog.contract/1.0.0",
       "files": [
@@ -2670,7 +2670,7 @@
       ]
     },
     "Play.Common/1.0.3": {
-      "sha512": "wVATYutJn/Mobb/9fjVyppvo8J+Gwzq0mDrnEf1Y5/gqBB30RCRJqf89sJeB5Y4MVlQ25dXjAWY39w/41yWEuA==",
+      "sha512": "0B8gpdq9IliFGD4WU36jtMBYN72Os2dbZR/SkvcuCJlZqbtWLv/siMXQy2ZzFPFOyWtBwLPRgmQrlaTBy+B/KA==",
       "type": "package",
       "path": "play.common/1.0.3",
       "files": [
@@ -6310,32 +6310,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSI\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\i.jevtic\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+      "projectUniqueName": "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
       "projectName": "Play.Catalog.Service",
-      "projectPath": "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
-      "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\obj\\",
+      "projectPath": "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+      "packagesPath": "C:\\Users\\i.jevtic\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages"
       ],
       "configFilePaths": [
-        "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\i.jevtic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\source\\C# repos\\MicroservicesApp\\packages": {},
+        "C:\\Projects\\LocalNuget": {},
+        "C:\\Source\\MicroservicesApp\\package": {},
+        "http://tc.corp.sks365.com/guestAuth/app/nuget/feed/_Root/default/v2": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6389,7 +6392,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

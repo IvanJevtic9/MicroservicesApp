@@ -9,7 +9,15 @@
       "DEBUG",
       "NET",
       "NET5_0",
-      "NETCOREAPP"
+      "NETCOREAPP",
+      "NET5_0_OR_GREATER",
+      "NETCOREAPP1_0_OR_GREATER",
+      "NETCOREAPP1_1_OR_GREATER",
+      "NETCOREAPP2_0_OR_GREATER",
+      "NETCOREAPP2_1_OR_GREATER",
+      "NETCOREAPP2_2_OR_GREATER",
+      "NETCOREAPP3_0_OR_GREATER",
+      "NETCOREAPP3_1_OR_GREATER"
     ],
     "languageVersion": "9.0",
     "platform": "",
@@ -1242,7 +1250,11 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/5.0.0": {},
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "compile": {
+          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -3481,14 +3493,14 @@
     "Play.Catalog.Contract/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uV86XJB3JI+EzYAbL/OQvG3QLnqhf+nXj7VF4AT3sNBjd+xtBmUXLBFn+A53PEcUyxjnNmo26wTdrgdYyltA1Q==",
+      "sha512": "sha512-VwocdKXiUeBzGdKW8T5iLOsSjvD3BRchdYhkPD121V8+8cY4uK3JnnpUPVY4PTC4fyvdcosSr6LAKk2FDDLUpA==",
       "path": "play.catalog.contract/1.0.0",
       "hashPath": "play.catalog.contract.1.0.0.nupkg.sha512"
     },
     "Play.Common/1.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wVATYutJn/Mobb/9fjVyppvo8J+Gwzq0mDrnEf1Y5/gqBB30RCRJqf89sJeB5Y4MVlQ25dXjAWY39w/41yWEuA==",
+      "sha512": "sha512-0B8gpdq9IliFGD4WU36jtMBYN72Os2dbZR/SkvcuCJlZqbtWLv/siMXQy2ZzFPFOyWtBwLPRgmQrlaTBy+B/KA==",
       "path": "play.common/1.0.3",
       "hashPath": "play.common.1.0.3.nupkg.sha512"
     },
