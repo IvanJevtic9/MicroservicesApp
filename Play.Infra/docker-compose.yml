@@ -1,24 +1,25 @@
+
 version: "3.8"
 
-services:
+services: 
   mongo:
     image: mongo
-    container_name: mongoDb
+    container_name: mongo
     ports:
       - 27017:27017
-    volumes:
-      - mongdbdata:/data/db
+    volumes: 
+      - mongodbdata:/data/db
 
   rabbitmq:
-    image: rabbitmq:management
+    image: rabbitmq:3-management
     container_name: rabbitmq
-    ports:
+    ports: 
       - 5672:5672
       - 15672:15672
     volumes:
-      - rabbitmqdata:/var/lin/rabbitmq
+      - rabbitmqdata:/var/lib/rabbitmq
     hostname: rabbitmq
 
-volumes:
-  mongdbdata:
+volumes: 
+  mongodbdata:
   rabbitmqdata:

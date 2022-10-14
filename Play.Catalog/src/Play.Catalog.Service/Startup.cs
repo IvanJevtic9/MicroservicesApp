@@ -7,7 +7,7 @@ using Microsoft.OpenApi.Models;
 using Play.Catalog.Service.Entities;
 using Play.Common.Identity;
 using Play.Common.MassTransit;
-using Play.Common.MongoDb;
+using Play.Common.MongoDB;
 using Play.Common.Settings;
 
 namespace Play.Catalog.Service
@@ -15,6 +15,9 @@ namespace Play.Catalog.Service
     public class Startup
     {
         private const string AllowedOriginSetting = "AllowedOrigin";
+
+        private ServiceSettings serviceSettings;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,33 +28,33 @@ namespace Play.Catalog.Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
+            serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
 
             services.AddMongo()
                     .AddMongoRepository<Item>("items")
                     .AddMassTransitWithRabbitMq()
-                    .AddJwtBererAuthentication();
+                    .AddJwtBearerAuthentication();
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy(Policies.READ, policy =>
+                options.AddPolicy(Policies.Read, policy =>
                 {
                     policy.RequireRole("Admin");
                     policy.RequireClaim("scope", "catalog.readaccess", "catalog.fullaccess");
                 });
 
-                options.AddPolicy(Policies.WRITE, policy =>
+                options.AddPolicy(Policies.Write, policy =>
                 {
                     policy.RequireRole("Admin");
                     policy.RequireClaim("scope", "catalog.writeaccess", "catalog.fullaccess");
-                });
+                });                
             });
 
             services.AddControllers(options =>
             {
                 options.SuppressAsyncSuffixInActionNames = false;
             });
-            
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Play.Catalog.Service", Version = "v1" });
@@ -70,9 +73,9 @@ namespace Play.Catalog.Service
                 app.UseCors(builder =>
                 {
                     builder.WithOrigins(Configuration[AllowedOriginSetting])
-                           .AllowAnyHeader()
-                           .AllowAnyMethod();
-                });
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });                
             }
 
             app.UseHttpsRedirection();
@@ -80,7 +83,6 @@ namespace Play.Catalog.Service
             app.UseRouting();
 
             app.UseAuthentication();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

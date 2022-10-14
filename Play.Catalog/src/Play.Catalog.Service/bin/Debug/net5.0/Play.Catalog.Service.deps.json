@@ -33,9 +33,8 @@
     ".NETCoreApp,Version=v5.0": {
       "Play.Catalog.Service/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.10",
-          "Play.Catalog.Contract": "1.0.0",
-          "Play.Common": "1.0.3",
+          "Play.Catalog.Contracts": "1.0.0",
+          "Play.Common": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -341,11 +340,11 @@
           "lib/netstandard2.0/Automatonymous.dll": {}
         }
       },
-      "DnsClient/1.4.0": {
+      "DnsClient/1.3.1": {
         "runtime": {
           "lib/netstandard2.1/DnsClient.dll": {
-            "assemblyVersion": "1.4.0.0",
-            "fileVersion": "1.4.0.0"
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
           }
         },
         "compile": {
@@ -367,7 +366,7 @@
           "lib/netstandard2.0/GreenPipes.dll": {}
         }
       },
-      "MassTransit/7.2.1": {
+      "MassTransit/7.1.4": {
         "dependencies": {
           "Automatonymous": "5.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "3.1.11",
@@ -386,69 +385,69 @@
         },
         "runtime": {
           "lib/netstandard2.0/MassTransit.dll": {
-            "assemblyVersion": "7.2.1.0",
-            "fileVersion": "7.2.1.0"
+            "assemblyVersion": "7.1.4.0",
+            "fileVersion": "7.1.4.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/MassTransit.dll": {}
         }
       },
-      "MassTransit.AspNetCore/7.2.1": {
+      "MassTransit.AspNetCore/7.1.4": {
         "dependencies": {
-          "MassTransit": "7.2.1",
-          "MassTransit.Extensions.DependencyInjection": "7.2.1",
+          "MassTransit": "7.1.4",
+          "MassTransit.Extensions.DependencyInjection": "7.1.4",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "3.1.11",
           "Microsoft.Extensions.Hosting.Abstractions": "3.1.11"
         },
         "runtime": {
           "lib/netstandard2.0/MassTransit.AspNetCoreIntegration.dll": {
-            "assemblyVersion": "7.2.1.0",
-            "fileVersion": "7.2.1.0"
+            "assemblyVersion": "7.1.4.0",
+            "fileVersion": "7.1.4.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/MassTransit.AspNetCoreIntegration.dll": {}
         }
       },
-      "MassTransit.Extensions.DependencyInjection/7.2.1": {
+      "MassTransit.Extensions.DependencyInjection/7.1.4": {
         "dependencies": {
-          "MassTransit": "7.2.1",
+          "MassTransit": "7.1.4",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/MassTransit.ExtensionsDependencyInjectionIntegration.dll": {
-            "assemblyVersion": "7.2.1.0",
-            "fileVersion": "7.2.1.0"
+            "assemblyVersion": "7.1.4.0",
+            "fileVersion": "7.1.4.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/MassTransit.ExtensionsDependencyInjectionIntegration.dll": {}
         }
       },
-      "MassTransit.RabbitMQ/7.2.1": {
+      "MassTransit.RabbitMQ/7.1.4": {
         "dependencies": {
-          "MassTransit": "7.2.1",
+          "MassTransit": "7.1.4",
           "RabbitMQ.Client": "6.2.1"
         },
         "runtime": {
           "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {
-            "assemblyVersion": "7.2.1.0",
-            "fileVersion": "7.2.1.0"
+            "assemblyVersion": "7.1.4.0",
+            "fileVersion": "7.1.4.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.10": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.5": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
         },
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
-            "assemblyVersion": "5.0.10.0",
-            "fileVersion": "5.0.1021.41022"
+            "assemblyVersion": "5.0.5.0",
+            "fileVersion": "5.0.521.16708"
           }
         },
         "compile": {
@@ -484,14 +483,14 @@
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
         }
       },
-      "Microsoft.Extensions.DependencyInjection/5.0.2": {
+      "Microsoft.Extensions.DependencyInjection/5.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
         },
         "runtime": {
           "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {
             "assemblyVersion": "5.0.0.1",
-            "fileVersion": "5.0.821.31504"
+            "fileVersion": "5.0.120.57516"
           }
         },
         "compile": {
@@ -619,48 +618,45 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "MongoDB.Bson/2.13.0": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
-        },
+      "MongoDB.Bson/2.11.6": {
         "runtime": {
-          "lib/netstandard2.1/MongoDB.Bson.dll": {
-            "assemblyVersion": "2.13.0.0",
-            "fileVersion": "2.13.0.0"
+          "lib/netstandard2.0/MongoDB.Bson.dll": {
+            "assemblyVersion": "2.11.6.0",
+            "fileVersion": "2.11.6.0"
           }
         },
         "compile": {
-          "lib/netstandard2.1/MongoDB.Bson.dll": {}
+          "lib/netstandard2.0/MongoDB.Bson.dll": {}
         }
       },
-      "MongoDB.Driver/2.13.0": {
+      "MongoDB.Driver/2.11.6": {
         "dependencies": {
-          "MongoDB.Bson": "2.13.0",
-          "MongoDB.Driver.Core": "2.13.0",
-          "MongoDB.Libmongocrypt": "1.2.1"
+          "MongoDB.Bson": "2.11.6",
+          "MongoDB.Driver.Core": "2.11.6",
+          "MongoDB.Libmongocrypt": "1.0.0"
         },
         "runtime": {
-          "lib/netstandard2.1/MongoDB.Driver.dll": {
-            "assemblyVersion": "2.13.0.0",
-            "fileVersion": "2.13.0.0"
+          "lib/netstandard2.0/MongoDB.Driver.dll": {
+            "assemblyVersion": "2.11.6.0",
+            "fileVersion": "2.11.6.0"
           }
         },
         "compile": {
-          "lib/netstandard2.1/MongoDB.Driver.dll": {}
+          "lib/netstandard2.0/MongoDB.Driver.dll": {}
         }
       },
-      "MongoDB.Driver.Core/2.13.0": {
+      "MongoDB.Driver.Core/2.11.6": {
         "dependencies": {
-          "DnsClient": "1.4.0",
-          "MongoDB.Bson": "2.13.0",
-          "MongoDB.Libmongocrypt": "1.2.1",
+          "DnsClient": "1.3.1",
+          "MongoDB.Bson": "2.11.6",
+          "MongoDB.Libmongocrypt": "1.0.0",
           "SharpCompress": "0.23.0",
-          "System.Buffers": "4.5.1"
+          "System.Buffers": "4.4.0"
         },
         "runtime": {
-          "lib/netstandard2.1/MongoDB.Driver.Core.dll": {
-            "assemblyVersion": "2.13.0.0",
-            "fileVersion": "2.13.0.0"
+          "lib/netstandard2.0/MongoDB.Driver.Core.dll": {
+            "assemblyVersion": "2.11.6.0",
+            "fileVersion": "2.11.6.0"
           }
         },
         "runtimeTargets": {
@@ -681,35 +677,21 @@
           }
         },
         "compile": {
-          "lib/netstandard2.1/MongoDB.Driver.Core.dll": {}
+          "lib/netstandard2.0/MongoDB.Driver.Core.dll": {}
         }
       },
-      "MongoDB.Libmongocrypt/1.2.1": {
-        "runtime": {
-          "lib/netstandard2.1/MongoDB.Libmongocrypt.dll": {
-            "assemblyVersion": "1.2.1.0",
-            "fileVersion": "1.2.1.0"
-          }
+      "MongoDB.Libmongocrypt/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
         },
-        "runtimeTargets": {
-          "runtimes/linux/native/libmongocrypt.so": {
-            "rid": "linux",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx/native/libmongocrypt.dylib": {
-            "rid": "osx",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win/native/mongocrypt.dll": {
-            "rid": "win",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Libmongocrypt.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         },
         "compile": {
-          "lib/netstandard2.1/MongoDB.Libmongocrypt.dll": {}
+          "lib/netstandard1.5/MongoDB.Libmongocrypt.dll": {}
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -797,26 +779,26 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "Play.Catalog.Contract/1.0.0": {
+      "Play.Catalog.Contracts/1.0.0": {
         "runtime": {
-          "lib/net5.0/Play.Catalog.Contract.dll": {
+          "lib/net5.0/Play.Catalog.Contracts.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         },
         "compile": {
-          "lib/net5.0/Play.Catalog.Contract.dll": {}
+          "lib/net5.0/Play.Catalog.Contracts.dll": {}
         }
       },
-      "Play.Common/1.0.3": {
+      "Play.Common/1.0.0": {
         "dependencies": {
-          "MassTransit.AspNetCore": "7.2.1",
-          "MassTransit.RabbitMQ": "7.2.1",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.10",
+          "MassTransit.AspNetCore": "7.1.4",
+          "MassTransit.RabbitMQ": "7.1.4",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.5",
           "Microsoft.Extensions.Configuration": "5.0.0",
           "Microsoft.Extensions.Configuration.Binder": "5.0.0",
-          "Microsoft.Extensions.DependencyInjection": "5.0.2",
-          "MongoDB.Driver": "2.13.0"
+          "Microsoft.Extensions.DependencyInjection": "5.0.1",
+          "MongoDB.Driver": "2.11.6"
         },
         "runtime": {
           "lib/net5.0/Play.Common.dll": {
@@ -957,7 +939,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Buffers/4.5.1": {},
+      "System.Buffers/4.4.0": {},
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -1062,7 +1044,7 @@
       "System.IO.Compression/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "System.Buffers": "4.5.1",
+          "System.Buffers": "4.4.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.IO": "4.3.0",
@@ -1080,7 +1062,7 @@
       },
       "System.IO.Compression.ZipFile/4.3.0": {
         "dependencies": {
-          "System.Buffers": "4.5.1",
+          "System.Buffers": "4.4.0",
           "System.IO": "4.3.0",
           "System.IO.Compression": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
@@ -1250,11 +1232,7 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
-        "compile": {
-          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {}
-        }
-      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -1424,7 +1402,7 @@
       "System.Text.Encoding.CodePages/4.5.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
-          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         }
       },
       "System.Text.Encoding.Extensions/4.3.0": {
@@ -3217,12 +3195,12 @@
       "path": "automatonymous/5.1.1",
       "hashPath": "automatonymous.5.1.1.nupkg.sha512"
     },
-    "DnsClient/1.4.0": {
+    "DnsClient/1.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CO1NG1zQdV0nEAXmr/KppLZ0S1qkaPwV0kPX5YPgmYBtrBVh1XMYHM54IXy3RBJu1k4thFtpzwo4HNHqxiuFYw==",
-      "path": "dnsclient/1.4.0",
-      "hashPath": "dnsclient.1.4.0.nupkg.sha512"
+      "sha512": "sha512-b9XczgqSjs3dd+OlV799jn+LXxdfirln1q36GKjs3QwWBhjhgIvgHLEG5s2VrBLcP4ogQjtA0PZ5+AmRJ35Vhg==",
+      "path": "dnsclient/1.3.1",
+      "hashPath": "dnsclient.1.3.1.nupkg.sha512"
     },
     "GreenPipes/4.0.0": {
       "type": "package",
@@ -3231,40 +3209,40 @@
       "path": "greenpipes/4.0.0",
       "hashPath": "greenpipes.4.0.0.nupkg.sha512"
     },
-    "MassTransit/7.2.1": {
+    "MassTransit/7.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-M74GNBSVsm6U6gfnSwUw4kfwlagVO/UXW3gCfbVCD1Zgr4NmKmzYKWrNq+kTBlYO28VbTm1VA53gfFZELh9hgg==",
-      "path": "masstransit/7.2.1",
-      "hashPath": "masstransit.7.2.1.nupkg.sha512"
+      "sha512": "sha512-rItMAwyxBIdsz+7xnWhOS77SWVX+RA605id5DQ7I/HCk1jGG5L8wBEcIAQmmdoKsfHBgYAFJGn6InWN+VSRNxA==",
+      "path": "masstransit/7.1.4",
+      "hashPath": "masstransit.7.1.4.nupkg.sha512"
     },
-    "MassTransit.AspNetCore/7.2.1": {
+    "MassTransit.AspNetCore/7.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UWrDwhvWpSE3yicv6ECn7Fdyw3QLYeK8dtn9XsaBN/3KbgX9aaH9q4b35BjAtadTsr3XWS2HpM/8WPlDy9xw7A==",
-      "path": "masstransit.aspnetcore/7.2.1",
-      "hashPath": "masstransit.aspnetcore.7.2.1.nupkg.sha512"
+      "sha512": "sha512-XnqB27Ye1RpL2mZfLSArLtHSeRTVT+mv+W+nhSqFwbo7VCe9+65DlseKPE7txgTAYw4mEMTngGXnMOSqBnhTVg==",
+      "path": "masstransit.aspnetcore/7.1.4",
+      "hashPath": "masstransit.aspnetcore.7.1.4.nupkg.sha512"
     },
-    "MassTransit.Extensions.DependencyInjection/7.2.1": {
+    "MassTransit.Extensions.DependencyInjection/7.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-j6169BvLUi36NcwbYx0i2NFHR83MRK/mOXzdTlpf5BWH1R3Znq1ms02lrdSr0q1LoDwZ+QF+5/hpQ6vSruyJPw==",
-      "path": "masstransit.extensions.dependencyinjection/7.2.1",
-      "hashPath": "masstransit.extensions.dependencyinjection.7.2.1.nupkg.sha512"
+      "sha512": "sha512-8vccdAj3w1ATbb06IOSmOQrKmG/2fDzW6jljjaJHEEmL/XtEr025LzRJN9xsxS2jgaqlKHhLtA1KZMLFe8ntMw==",
+      "path": "masstransit.extensions.dependencyinjection/7.1.4",
+      "hashPath": "masstransit.extensions.dependencyinjection.7.1.4.nupkg.sha512"
     },
-    "MassTransit.RabbitMQ/7.2.1": {
+    "MassTransit.RabbitMQ/7.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TK7+DCGqCxwOokuoWldcJH8HSUgrTQU7W6cYyl33e26DAfJ97A/F2WHm4iDl2q+DXYIwwJBwcYw/tZ1Hep3DRA==",
-      "path": "masstransit.rabbitmq/7.2.1",
-      "hashPath": "masstransit.rabbitmq.7.2.1.nupkg.sha512"
+      "sha512": "sha512-TkVhg/pj0rdSLyGreYk2tQOowEjDA8Uvws2/Emq5vQgHpDWo9Z9+402dOuApBdg2udzmuOD2ukpEAXsf6KFtnA==",
+      "path": "masstransit.rabbitmq/7.1.4",
+      "hashPath": "masstransit.rabbitmq.7.1.4.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.10": {
+    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WGMw2zDSgLcxSO0jwBPpp20e+LpvAFe/AhUlEQIV5IkPJOIZtEKbF58tRZb/qoAIJ00GfREsSLZAey1OVDI2KA==",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.10",
-      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.5.0.10.nupkg.sha512"
+      "sha512": "sha512-wivdSSc+S+bNIWj/nUlpfNnpTnj5O+33NqXKiDlHFYaO2J6whRqNsGXlJ+UViKUzKMIDvj4K67W+dmVywUyXiw==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.5",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -3308,12 +3286,12 @@
       "path": "microsoft.extensions.configuration.binder/5.0.0",
       "hashPath": "microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection/5.0.2": {
+    "Microsoft.Extensions.DependencyInjection/5.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xzFW00AZEvOXM1OX+0+AYH5op/Hf3u//e6wszBd/rK72sypD+jx5CtsHxM4BVuFBEs8SajfO4QzSJtrQaHDr4A==",
-      "path": "microsoft.extensions.dependencyinjection/5.0.2",
-      "hashPath": "microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512"
+      "sha512": "sha512-//mDNrYeiJ0eh/awFhDFJQzkRVra/njU5Y4fyK7X29g5HScrzbUkKOKlyTtygthcGFt4zNC8G5CFCjb/oizomA==",
+      "path": "microsoft.extensions.dependencyinjection/5.0.1",
+      "hashPath": "microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
       "type": "package",
@@ -3434,33 +3412,33 @@
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
     },
-    "MongoDB.Bson/2.13.0": {
+    "MongoDB.Bson/2.11.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-voNakTxq2NV3n5lM+HpJXcd4UgLk7dtkzaPyqHMDtiBqKJauqFJ0XQIM6l9v2LTqP/GPiDCxf3XCTJHphxamZA==",
-      "path": "mongodb.bson/2.13.0",
-      "hashPath": "mongodb.bson.2.13.0.nupkg.sha512"
+      "sha512": "sha512-JMxPQvz61IW+AFDWEkl4Dwswc4Eg6Zrii65T9R6VMHwdSdcb1eseHdwIyfjyf776vCmDVJbpSHW8075A6tTqqg==",
+      "path": "mongodb.bson/2.11.6",
+      "hashPath": "mongodb.bson.2.11.6.nupkg.sha512"
     },
-    "MongoDB.Driver/2.13.0": {
+    "MongoDB.Driver/2.11.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LCnK43X32QklSCgNMHZ4B+wT5Y7TJjWkXRVPRdxlwhdmS+OT4n/nO7wc6cLZaLdtpbBQHrDvQj0DdEl0VAtAMQ==",
-      "path": "mongodb.driver/2.13.0",
-      "hashPath": "mongodb.driver.2.13.0.nupkg.sha512"
+      "sha512": "sha512-C3JNiu0Tr7upxrj3Oqs7Ys80pJnkA76UR2V/hXuvqU3II5759coirsXcURMHTgwIEN1kFhPlta4Bdg19ShHJUg==",
+      "path": "mongodb.driver/2.11.6",
+      "hashPath": "mongodb.driver.2.11.6.nupkg.sha512"
     },
-    "MongoDB.Driver.Core/2.13.0": {
+    "MongoDB.Driver.Core/2.11.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bPt4U/LSKQgZV1yZ5Llv4LxmTlpm8ej2lENDj/Ttc+OS/7i9pqxIEkECjJCl576vODfexcFOtU+1+eiImBVxhQ==",
-      "path": "mongodb.driver.core/2.13.0",
-      "hashPath": "mongodb.driver.core.2.13.0.nupkg.sha512"
+      "sha512": "sha512-vHORCEJ3nnJEzUkMUiIIvkej8S5w6tWA1h65YZMYAOG78Hf6MhtsFCRH8iyMls1ppRUnqwh9Cy1QkPc8MbAu0g==",
+      "path": "mongodb.driver.core/2.11.6",
+      "hashPath": "mongodb.driver.core.2.11.6.nupkg.sha512"
     },
-    "MongoDB.Libmongocrypt/1.2.1": {
+    "MongoDB.Libmongocrypt/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VUtUAO2W6+DOjBtLHuD9WlTTcxYLXCNfp9YeKcws5LNAl0xej2KX1I37VsTAKnmnMjAF2Vwy1FXLCpK84FglMA==",
-      "path": "mongodb.libmongocrypt/1.2.1",
-      "hashPath": "mongodb.libmongocrypt.1.2.1.nupkg.sha512"
+      "sha512": "sha512-zkcsra5riDiKXqOiCKskycakpbO5RYkuUWG+z2AZML3A4NShvAs/D3InwkxH0OcbjZQOWo763Hjdmhr0AaylcA==",
+      "path": "mongodb.libmongocrypt/1.0.0",
+      "hashPath": "mongodb.libmongocrypt.1.0.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
@@ -3490,19 +3468,19 @@
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
     },
-    "Play.Catalog.Contract/1.0.0": {
+    "Play.Catalog.Contracts/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VwocdKXiUeBzGdKW8T5iLOsSjvD3BRchdYhkPD121V8+8cY4uK3JnnpUPVY4PTC4fyvdcosSr6LAKk2FDDLUpA==",
-      "path": "play.catalog.contract/1.0.0",
-      "hashPath": "play.catalog.contract.1.0.0.nupkg.sha512"
+      "sha512": "sha512-qY3oIUCdzGj4MNOZG1UFgmX9R0m4L52NVmQqNYn/PY9F0dmIRANfGVOzTUVHKkJY5QmgRy3ww0mD/iNikgE2BQ==",
+      "path": "play.catalog.contracts/1.0.0",
+      "hashPath": "play.catalog.contracts.1.0.0.nupkg.sha512"
     },
-    "Play.Common/1.0.3": {
+    "Play.Common/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0B8gpdq9IliFGD4WU36jtMBYN72Os2dbZR/SkvcuCJlZqbtWLv/siMXQy2ZzFPFOyWtBwLPRgmQrlaTBy+B/KA==",
-      "path": "play.common/1.0.3",
-      "hashPath": "play.common.1.0.3.nupkg.sha512"
+      "sha512": "sha512-AVpbAx8haaPsKJuz/ONc/NDO0LJL04yOJxLnT4apm4jORBXqNIMU8qib/L+IL3+/PCjQAWsGEq7pV0K2Hnxvnw==",
+      "path": "play.common/1.0.0",
+      "hashPath": "play.common.1.0.0.nupkg.sha512"
     },
     "RabbitMQ.Client/6.2.1": {
       "type": "package",
@@ -3665,12 +3643,12 @@
       "path": "system.appcontext/4.3.0",
       "hashPath": "system.appcontext.4.3.0.nupkg.sha512"
     },
-    "System.Buffers/4.5.1": {
+    "System.Buffers/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
-      "path": "system.buffers/4.5.1",
-      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
+      "sha512": "sha512-AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "path": "system.buffers/4.4.0",
+      "hashPath": "system.buffers.4.4.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -3896,12 +3874,12 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
-      "path": "system.runtime.compilerservices.unsafe/5.0.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",

@@ -1,10 +1,8 @@
-using System;
-
 namespace Play.Identity.Service
 {
     public static class Roles
     {
-        public const string ADMIN = "Admin";
-        public const string PLAYER = "Player";
+        public const string Admin = "Admin";
+        public const string Player = "Player";
     }
 }

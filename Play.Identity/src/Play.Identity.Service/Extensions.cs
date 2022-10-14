@@ -1,4 +1,5 @@
-﻿using Play.Identity.Service.Entities;
+using Play.Identity.Service.Dtos;
+using Play.Identity.Service.Entities;
 
 namespace Play.Identity.Service
 {
@@ -7,11 +8,11 @@ namespace Play.Identity.Service
         public static UserDto AsDto(this ApplicationUser user)
         {
             return new UserDto(
-                    user.Id,
-                    user.UserName,
-                    user.Email,
-                    user.Gil,
-                    user.CreatedOn);
+                user.Id, 
+                user.UserName, 
+                user.Email, 
+                user.Gil, 
+                user.CreatedOn);
         }
     }
 }

@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {}
+    "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {}
   },
   "projects": {
-    "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {
+    "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+        "projectUniqueName": "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
         "projectName": "Play.Catalog.Service",
-        "projectPath": "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
-        "packagesPath": "C:\\Users\\i.jevtic\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\obj\\",
+        "projectPath": "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\Play.Catalog.Service.csproj",
+        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+        "outputPath": "D:\\source\\C# repos\\MicroservicesApp\\Play.Catalog\\src\\Play.Catalog.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\i.jevtic\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Projects\\LocalNuget": {},
-          "C:\\Source\\MicroservicesApp\\package": {},
-          "http://tc.corp.sks365.com/guestAuth/app/nuget/feed/_Root/default/v2": {},
+          "D:\\source\\C# repos\\MicroservicesApp\\packages": {},
+          "D:\\source\\Git\\PlatformForTesting\\server\\src\\PlatformForTesting.Package": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,17 +46,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[5.0.10, )"
-            },
-            "Play.Catalog.Contract": {
+            "Play.Catalog.Contracts": {
               "target": "Package",
               "version": "[1.0.0, )"
             },
             "Play.Common": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -83,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

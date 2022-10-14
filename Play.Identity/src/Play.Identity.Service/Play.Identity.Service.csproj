@@ -2,16 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>5df3d849-1fe8-4399-ae83-743cf2a0277a</UserSecretsId>
+    <UserSecretsId>d3211b89-44d5-46cf-84d5-13172985dfca</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.Identity.MongoDbCore" Version="3.1.1" />
     <PackageReference Include="IdentityServer4" Version="4.1.2" />
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-    <PackageReference Include="Play.Common" Version="1.0.3" />
+    <PackageReference Include="Play.Common" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 

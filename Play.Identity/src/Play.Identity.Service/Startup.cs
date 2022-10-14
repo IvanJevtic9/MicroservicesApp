@@ -1,8 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -11,7 +18,6 @@ using Play.Common.Settings;
 using Play.Identity.Service.Entities;
 using Play.Identity.Service.HostedServices;
 using Play.Identity.Service.Settings;
-using System;
 
 namespace Play.Identity.Service
 {
@@ -35,33 +41,31 @@ namespace Play.Identity.Service
             var identityServerSettings = Configuration.GetSection(nameof(IdentityServerSettings)).Get<IdentityServerSettings>();
 
             services.Configure<IdentitySettings>(Configuration.GetSection(nameof(IdentitySettings)))
-                    .AddDefaultIdentity<ApplicationUser>()
-                    .AddRoles<ApplicationRole>()
-                    .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>(
-                        mongoDbSettings.ConnectionString,
-                        serviceSettings.Name
-                    );
+                .AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<ApplicationRole>()
+                .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
+                (
+                    mongoDbSettings.ConnectionString,
+                    serviceSettings.ServiceName
+                );
 
-            // Adding Identity
             services.AddIdentityServer(options =>
             {
                 options.Events.RaiseSuccessEvents = true;
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseErrorEvents = true;
             })
-                    .AddAspNetIdentity<ApplicationUser>()
-                    .AddInMemoryApiScopes(identityServerSettings.ApiScopes)
-                    .AddInMemoryApiResources(identityServerSettings.ApiResources)
-                    .AddInMemoryClients(identityServerSettings.Clients)
-                    .AddInMemoryIdentityResources(identityServerSettings.IdentityResources)
-                    .AddDeveloperSigningCredential(); // Only in developing mode
+                .AddAspNetIdentity<ApplicationUser>()
+                .AddInMemoryApiScopes(identityServerSettings.ApiScopes)
+                .AddInMemoryApiResources(identityServerSettings.ApiResources)
+                .AddInMemoryClients(identityServerSettings.Clients)
+                .AddInMemoryIdentityResources(identityServerSettings.IdentityResources)
+                .AddDeveloperSigningCredential();
 
             services.AddLocalApiAuthentication();
 
             services.AddControllers();
-
             services.AddHostedService<IdentitySeedHostedService>();
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Play.Identity.Service", Version = "v1" });
@@ -80,8 +84,8 @@ namespace Play.Identity.Service
                 app.UseCors(builder =>
                 {
                     builder.WithOrigins(Configuration[AllowedOriginSetting])
-                           .AllowAnyHeader()
-                           .AllowAnyMethod();
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
                 });
             }
 
@@ -91,9 +95,7 @@ namespace Play.Identity.Service
 
             app.UseRouting();
 
-            // it's important to use here between routing and authorization
             app.UseIdentityServer();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

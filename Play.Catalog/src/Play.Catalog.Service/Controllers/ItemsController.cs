@@ -1,45 +1,48 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Play.Catalog.Contracts;
 using Play.Catalog.Service.Dtos;
 using Play.Catalog.Service.Entities;
 using Play.Common;
-using Play.Catalog.Contract;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Play.Catalog.Service.Controllers
 {
     [ApiController]
     [Route("items")]
-    [Authorize(Roles = AdminRole)]
     public class ItemsController : ControllerBase
     {
         private const string AdminRole = "Admin";
 
-        private readonly IRepository<Item> repository;
+        private readonly IRepository<Item> itemsRepository;
         private readonly IPublishEndpoint publishEndpoint;
-        public ItemsController(IRepository<Item> repository, IPublishEndpoint publishEndpoint)
+
+        public ItemsController(IRepository<Item> itemsRepository, IPublishEndpoint publishEndpoint)
         {
-            this.repository = repository;
+            this.itemsRepository = itemsRepository;
             this.publishEndpoint = publishEndpoint;
         }
 
         [HttpGet]
-        [Authorize(Policies.READ)]
+        [Authorize(Policies.Read)]
         public async Task<ActionResult<IEnumerable<ItemDto>>> GetAsync()
         {
-            return Ok((await repository.GetAllAsync()).Select(item => item.AsDto()));
+            var items = (await itemsRepository.GetAllAsync())
+                        .Select(item => item.AsDto());
+
+            return Ok(items);
         }
 
         // GET /items/{id}
         [HttpGet("{id}")]
-        [Authorize(Policies.READ)]
-        public async Task<ActionResult<ItemDto>> GetById(Guid id)
+        [Authorize(Policies.Read)]
+        public async Task<ActionResult<ItemDto>> GetByIdAsync(Guid id)
         {
-            var item = (await repository.GetAsync(id));
+            var item = await itemsRepository.GetAsync(id);
 
             if (item == null)
             {
@@ -51,63 +54,62 @@ namespace Play.Catalog.Service.Controllers
 
         // POST /items
         [HttpPost]
-        [Authorize(Policies.WRITE)]
-        public async Task<ActionResult<ItemDto>> CreateAsync(CreateItemDto createItemDto)
+        [Authorize(Policies.Write)]
+        public async Task<ActionResult<ItemDto>> PostAsync(CreateItemDto createItemDto)
         {
-            var item = new Item()
+            var item = new Item
             {
-                Id = Guid.NewGuid(),
                 Name = createItemDto.Name,
                 Description = createItemDto.Description,
                 Price = createItemDto.Price,
-                CreatedData = DateTimeOffset.UtcNow
+                CreatedDate = DateTimeOffset.UtcNow
             };
 
-            await repository.CreateAsync(item);
+            await itemsRepository.CreateAsync(item);
+
             await publishEndpoint.Publish(new CatalogItemCreated(item.Id, item.Name, item.Description));
 
-            return CreatedAtAction(nameof(GetById), new
-            {
-                id = item.Id
-            }, item);
+            return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id }, item);
         }
 
         // PUT /items/{id}
         [HttpPut("{id}")]
-        [Authorize(Policies.WRITE)]
-        public async Task<IActionResult> UpdateAsync(Guid id, UpdateItemDto updateItemDto)
+        [Authorize(Policies.Write)]
+        public async Task<IActionResult> PutAsync(Guid id, UpdateItemDto updateItemDto)
         {
-            var item = await repository.GetAsync(id);
+            var existingItem = await itemsRepository.GetAsync(id);
 
-            if (item == null)
+            if (existingItem == null)
             {
                 return NotFound();
             }
 
-            item.Name = updateItemDto.Name;
-            item.Description = updateItemDto.Description;
-            item.Price = updateItemDto.Price;
+            existingItem.Name = updateItemDto.Name;
+            existingItem.Description = updateItemDto.Description;
+            existingItem.Price = updateItemDto.Price;
 
-            await repository.UpdateAsync(item);
-            await publishEndpoint.Publish(new CatalogItemUpdated(item.Id, item.Name, item.Description));
+            await itemsRepository.UpdateAsync(existingItem);
+
+            await publishEndpoint.Publish(new CatalogItemUpdated(existingItem.Id, existingItem.Name, existingItem.Description));
 
             return NoContent();
         }
 
         // DELETE /items/{id}
         [HttpDelete("{id}")]
-        [Authorize(Policies.WRITE)]
+        [Authorize(Policies.Write)]
         public async Task<IActionResult> DeleteAsync(Guid id)
         {
-            var item = await repository.GetAsync(id);
+            var item = await itemsRepository.GetAsync(id);
 
             if (item == null)
             {
                 return NotFound();
             }
 
-            await repository.RemoveAsync(id);
-            await publishEndpoint.Publish(new CatalogItemDeleted(item.Id));
+            await itemsRepository.RemoveAsync(item.Id);
+
+            await publishEndpoint.Publish(new CatalogItemDeleted(id));
 
             return NoContent();
         }
